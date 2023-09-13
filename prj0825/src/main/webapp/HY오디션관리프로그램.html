@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>참가자 등록</title>
+<link href="./css/HY오디션관리프로그램.css" rel="stylesheet" />
+</head>
+
+
+<script>
+
+
+function check() {
+	//return true;
+	
+	let frm = document.frm;
+	let userid = frm.userid;
+	let username = frm.username;
+	let userbirth = frm.userbirth;
+	let charming = frm.charming;
+	
+	
+	if(userid.value == "") {
+		alert("아이디 입력");
+		userid.focus();
+		return false;
+	}
+	
+	
+	if (username.value == "") {
+		alert("이름 입력");
+		username.focus();
+		return false;
+	}
+	
+	
+	if (userbirth.value == "") {
+		alert("생일 입력");
+		userbirth.focus();
+		return false;
+	}
+	
+	
+	if (charming.value == "") {
+		alert("매력무대 입력");
+		charming.focus();
+		return false;
+	}
+	
+	return true;
+	
+}
+
+
+</script>
+
+
+<body>
+	
+<table border="1">
+	<caption>참가자 등록 </caption>
+	
+<form name="frm" action="HY오디션관리프로그램.jsp" method="post" onsubmit="return check()">	
+	
+	<tr>
+	<td>참가자ID</td>
+	<td><input type="text" name="userid"></td>
+	</tr>
+	
+	<tr>
+	<td>참가자이름</td>
+	<td><input type="text" name="username"></td>
+	</tr>
+	
+	<tr>
+	<td>생년월일</td>
+	<td><input type="text" name="userbirth">년<input type="text" name="userbirth">월<input type="text" name="userbirth">일</td>
+	</tr>
+	
+	<tr>
+	<td>성별</td>
+	<td><input type="radio">남<input type="radio">여</td>
+	</tr>
+	
+	
+	<tr>
+	<td>실력무대</td>
+	<td>
+	<select>
+	<option>선택</option>
+	<option>[V] 보컬</option>
+	<option>[D] 댄스</option>
+	<option>[R] 랩</option>
+	</select>
+	</td>
+	</tr>
+	
+	
+	<tr>
+	<td>매력무대</td>
+	<td><input type="text" name="charming"></td>
+	</tr>
+	
+	
+	<tr>
+	<td colspan="2">
+	<button>저장</button>
+	<button>취소</button>
+	</td>
+	</tr>
+	
+	
+</table>
+	
+	
+</form>	
+</body>
+</html>

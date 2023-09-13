@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header{
+	height: 80px;
+	background-color: blue;
+	text-align: center;
+}
+
+h2{
+	padding-top: 20px;
+}
+
+nav{
+	padding: 10px;
+	background-color: darkblue;
+	color: white;
+}
+
+
+ul li{
+	padding-right: 10px;
+}
+
+nav ul >li{
+	display: inline-block;
+}
+
+
+table{
+	height: 300px;
+	border-color: 1px solid black;
+	margin: 0 auto;
+}
+
+
+td{
+	border: 1px solid black;
+}
+
+
+td:nth-child(1) {
+	text-align: center;
+}
+
+
+a{
+	color: white;
+	text-decoration: none;
+}
+

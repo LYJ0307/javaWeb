@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+
+*{
+	margin: 0  ;
+	padding: 0 ;
+}
+
+
+header{
+	padding: 20px;
+	background-color: aqua;
+	text-align: center;
+	color: white;
+}
+
+table{
+	width: 500px;
+	height: 300px;
+	border: 1px solid black;
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+
+
+section{
+	background-color: lightgray;
+}
+
+td:nth-child(1){
+	
+	color: beige;
+	text-align: center;
+}
+td{
+	border: 1px solid black;
+}
+

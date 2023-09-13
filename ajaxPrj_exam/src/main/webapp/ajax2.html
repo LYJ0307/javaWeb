@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	
+	
+	
+	function ajax2 ( o ) {
+		let type = o.get;
+		let dataType = o.dataType;
+		let url = o.url;
+		let Movie = "영화입니다";
+		let result = true;
+		
+		
+		if (result ) {
+			o.success(Movie);
+		}
+		else {
+			o.error();
+		}
+		
+		
+	}
+	
+	
+	
+	
+	function send() {
+		
+		ajax2({
+			type: "get",
+			dataType: "text",
+			url: "Movie2",
+			success: function ( data) {
+				alert(data);
+			},
+			error: function() {
+				alert("요청에 실패했습니다");
+			}
+		}
+			
+		)
+		
+	}
+	
+	
+	
+</script>
+
+</head>
+<body>
+	
+	<button onclick="send()">음식정보</button>
+	
+	<div id="result"></div>
+	
+
+</body>
+</html>

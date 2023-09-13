@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+	
+	
+	function send() {
+		
+		$.ajax(
+			{
+				type: "get",
+				dataType: "text",
+				url: "/ajaxPrj_exam/Movie1",
+				
+				success: function( data, status) {
+					alert(data);
+					
+					$("#result").html( data);
+					
+					console.log( data);
+					console.log( status);
+					
+				},
+				
+				error: function( err) {
+					console.log(err);
+				}
+				
+				
+			}
+		)
+		
+	}
+	
+	
+	
+</script>
+
+</head>
+<body>
+	
+	<button onclick="send()">음식정보</button>
+	
+	<div id="result"></div>
+	
+
+</body>
+</html>
